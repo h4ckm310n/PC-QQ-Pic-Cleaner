@@ -28,8 +28,8 @@ python3 clean.py --db /path/to/db_file --cp /path/to/message/folder \(-g GROUP_N
 * -h, --help: 显示说明
 * --db: 解码后的数据库文件的路径
 * --cp, --chat-path: 聊天记录所在路径，如“C:\Users\XXX\Documents\Tencent Files\10000”
-* -f, --friends: 指定的好友QQ号
-* -g, --groups: 指定的群号
+* -f, --friend: 指定的好友QQ号
+* -g, --group: 指定的群号
 * -t, --table: 指定的数据表名称
 * -l, --list: 列出所有的数据表
 * --scan: 扫描所有聊天记录中的图片文件，并按照图片文件占用空间的大小顺序输出结果
