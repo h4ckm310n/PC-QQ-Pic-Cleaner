@@ -297,7 +297,12 @@ def Unpack(b: bytes) -> Msg:
             msg.SenderNickname = DecodeNickname(v)
         else:
             if t in MsgDecoders:
-                msg.Elements.append(MsgDecoders[t](v))
+                decode_element = None
+                try:
+                    decode_element = MsgDecoders[t](v)
+                except Exception as e:
+                    print(f"Failed to decode element: {e}, skip")
+                msg.Elements.append(decode_element)
 
     return msg
 
